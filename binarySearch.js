@@ -18,8 +18,6 @@ function recBinary(num, arr, firstIndex, lastIndex, midIndex){
 
         recBinary(num,sortedArr, firstIndex, lastIndex, midIndex)
     }
-    return midIndex
-
 }
 
 let binarySearch = (num, arr) => {
@@ -38,7 +36,9 @@ let binarySearch = (num, arr) => {
             lastIndex = arr.length -1
         }
         midIndex = firstIndex + Math.floor((lastIndex-firstIndex)/2)
-
+        if(midIndex < 3){
+           if(arr[midIndex] == num) return true
+           return false
+        }
     }
-    return midIndex
 }
